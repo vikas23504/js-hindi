@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   const para = document.createElement('p')
+   console.log(para);
+   para.className = "mypara"
+   para.id = Math.round( Math.random()*10+1)
+   para.setAttribute("title","vikas")
+   para.style.padding="20px"
+   para.style.backgroundColor = "yellow"
+//    para.innerText = "hello coders"
+
+ const addText =  document.createTextNode("chai or code")
+ para.append(addText)
+ document.body.appendChild(para)
+
+
+   </script>
+</body>
+</html>
