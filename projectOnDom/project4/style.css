@@ -1,0 +1,103 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 400px;
+  /* backdrop-filter: blur(10px); */
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input.usernum {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+  outline: none;
+  /* transition: 0.3s ease; */
+}
+
+input.usernum:focus {
+  border: 2px solid #ffd700;
+  box-shadow: 0px 0px 8px #ffd700;
+}
+
+.submit-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ffd700;
+  color: #333;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ffea61;
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gameDeta {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.gameDeta p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.previousGuesss,
+.guessremain {
+  font-size: 22px;
+  color: #00ffcc;
+}
+
+.instruction {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6f61;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
