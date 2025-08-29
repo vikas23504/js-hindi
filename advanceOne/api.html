@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <div class="body">
+        <a href="" class="profile"></a>
+
+    </div>
+      <div class="card" id="profileCard">
+    Loading...
+  </div>
+</body>
+<script>
+    const requesUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requesUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState===4) {
+            const data = JSON.parse(this.responseText)
+        //     console.log(`vikas`);
+            
+        //     console.log(data.followers);
+        //   let profile =   data.avatar_url;
+        //    document.querySelector('.profile').innerHTML= profile
+        // console.log(this.responseText);
+         const myProfile = {
+            name: data.login,
+            followers: data.followers,
+            avatar: data.avatar_url,
+            profileLink: data.html_url
+        }
+
+        // console.log(myProfile);
+        document.getElementById("profileCard").innerHTML = `
+          <img src="${myProfile.avatar}" alt="Profile Image">
+          <h2>${myProfile.name}</h2>
+          <p class="followers">Followers: ${myProfile.followers}</p>
+          <a href="${myProfile.profileLink}">View Profile</a>
+        `;
+        
+            
+        }
+    }
+    
+    xhr.send();
+</script>
+</html>
